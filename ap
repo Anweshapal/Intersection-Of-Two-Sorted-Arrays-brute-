@@ -1,1 +1,33 @@
+import java.util.* ;
+import java.io.*; 
+public class Solution
+{
+	public static ArrayList<Integer> findArrayIntersection(ArrayList<Integer> arr1, int n, ArrayList<Integer> arr2, int m)
+	{
+
+ 
+
+		ArrayList<Integer> ans = new ArrayList<>();
+		int vis[]=new int[m];
+		for(int i=0;i<n;i++){
+			for(int j=0;j<m;j++){
+              
+			  if(arr1.get(i).equals(arr2.get(j)) && vis[j]==0){
+
+                 ans.add(arr2.get(j));
+				 vis[j]=1;
+				 break;
+			}
+			  else if(arr2.get(j)>arr1.get(i)){
+			  break;
+			  }
+			
+		}
+		
+	}
+	return ans;
+
+    }		
+	
+}
 
